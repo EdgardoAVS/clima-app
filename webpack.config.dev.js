@@ -2,9 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
 
   entry: "./src/index.js",
 
@@ -34,11 +35,9 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.png/,
         type: "asset/resource",
-				generator: {
-          filename: 'static/images/[hash][ext][query]',
-        },
+        
       }
     ]
   },
@@ -51,10 +50,9 @@ module.exports = {
 		watchFiles: path.join(__dirname, "./**"),
     compress: true,
     historyApiFallback: true,
-    port: 3003,
+    port: 3005,
 		open: true,
   },
-
   plugins: [
     new HtmlWebpackPlugin({
       inject: 'body',
@@ -64,6 +62,14 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'styles/[name].[contenthash].css'
     }),
-    new Dotenv()
+    new Dotenv(),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "src", "assets/images"),
+          to: "assets/images"
+        }
+      ]
+    }),
   ]
 }

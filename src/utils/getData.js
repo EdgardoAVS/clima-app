@@ -3,16 +3,16 @@ const KEY = process.env.KEY;
 
 const getData = async (city) => {
 
-  const apiURL = `${API}q=${city}&appid=${KEY}`
-
+  
   try {
-    const res = await fetch(apiURL);
-    const data = await res.json();
+    const apiURL = `${API}q=${city}&appid=${KEY}`
+    const res = await fetch(apiURL)
+    const data = res.json();
+    
     return data;
   } catch (error) {
     console.log(error)
   }
-
 
 }
 

@@ -136,7 +136,6 @@ body {
 }
 
 .remove {
-  display: block;
   line-height: 0;
   position: absolute;
   top: calc(0% - -12px);
@@ -153,4 +152,8 @@ footer {
 }
 footer a{
   color: #000;
+}
+
+.card:hover .remove{
+  display: block;
 }
