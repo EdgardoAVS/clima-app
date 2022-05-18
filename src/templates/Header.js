@@ -14,7 +14,7 @@ const Header = () => {
         </li>
 
         <li>
-          <a href="">
+          <a href="https://github.com/EdgardoAVS/clima-app" target='_blank' rel='noopener noreferrer'>
             <img src="../assets/images/github.png" alt="Code" alt="Code">
             <span>Code</span>
           </a>

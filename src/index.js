@@ -35,12 +35,12 @@ async function getCityName (cityName) {
     searchInput.setAttribute('placeholder', "City not found");
     searchInput.value = "";
   }
-
+  
 }
 
 function removeCard () {
   console.log(mainContent.childNodes)
 }
-removeCard()
+
 
 
