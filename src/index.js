@@ -31,16 +31,18 @@ async function getCityName (cityName) {
     mainContent.insertAdjacentHTML('beforeend', `${card}`);
     searchInput.value = "";
     searchInput.setAttribute('placeholder', "Search for a city");
+    removeCard();
   } else {
     searchInput.setAttribute('placeholder', "City not found");
     searchInput.value = "";
   }
-  
 }
 
 function removeCard () {
-  console.log(mainContent.childNodes)
+  const newContainer = document.querySelector('.main-content').children;
+  for(let item of newContainer) {  
+      item.querySelector('.remove')
+      item.addEventListener('click', () => item.remove())
+  }
 }
-
-
 

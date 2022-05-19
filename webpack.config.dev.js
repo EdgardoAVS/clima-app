@@ -5,7 +5,7 @@ const Dotenv = require('dotenv-webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
 
   entry: "./src/index.js",
 
@@ -50,7 +50,7 @@ module.exports = {
 		watchFiles: path.join(__dirname, "./**"),
     compress: true,
     historyApiFallback: true,
-    port: 3005,
+    port: 3001,
 		open: true,
   },
   plugins: [
