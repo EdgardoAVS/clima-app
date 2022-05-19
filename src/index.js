@@ -40,9 +40,9 @@ async function getCityName (cityName) {
 
 function removeCard () {
   const newContainer = document.querySelector('.main-content').children;
-  for(let item of newContainer) {  
-      item.querySelector('.remove')
-      item.addEventListener('click', () => item.remove())
+  for(let card of newContainer) {  
+      const selectCard = card.querySelector('.remove')
+      selectCard.addEventListener('click', () => card.remove())
   }
 }
 
