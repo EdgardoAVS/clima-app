@@ -170,14 +170,9 @@ footer a{
   display: none;
 }
 
-.menu {
-  display: none;
-}
 .menu-close {
   display: none;
 }
-
-
 
 
 @media (max-width: 500px) {
@@ -204,6 +199,8 @@ footer a{
     display: none;
     border: 1px solid #0B1F44;
     z-index: 1;
+    transition: opacity .95s;
+    opacity: 1
   }
   .menu img {
     width: 30px;
@@ -229,3 +226,5 @@ footer a{
     background-color: rgb(176, 176, 176);
   }
 }
+
+

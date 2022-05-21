@@ -24,11 +24,11 @@ function App () {
   });
   const menuButton = document.querySelector('.menu-button');
   menuButton.addEventListener('click', () => {
-
+    
     const menu = document.querySelector('.menu');
     const menuOpen = document.querySelector('.menu-open');
-    const menuClose = document.querySelector('.menu-close')
-    if(menu.style.display === "none") {
+    const menuClose = document.querySelector('.menu-close');
+    if(menu.style.display == "none") {
       menuOpen.style.display = "none";
       menuClose.style.display = "block";
       menu.style.display = "block";
