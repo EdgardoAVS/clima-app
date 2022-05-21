@@ -8,21 +8,21 @@ const Header = () => {
       <ul>
         <li>
           <a href="https://openweathermap.org/" target='_blank' rel='noopener noreferrer'>
-            <img src="../assets/images/key.png" alt="API" alt="API Icon">
+            <img src="../assets/images/key.png" alt="API Icon">
             <span>API</span>
           </a>
         </li>
 
         <li>
           <a href="https://github.com/EdgardoAVS/clima-app" target='_blank' rel='noopener noreferrer'>
-            <img src="../assets/images/github.png" alt="Code" alt="Code">
+            <img src="../assets/images/github.png" alt="Code">
             <span>Code</span>
           </a>
         </li>
         <li>
 
           <a href="https://www.linkedin.com/in/edgardoavs/" target='_blank' rel='noopener noreferrer'>
-            <img src="../assets/images/linkedin.png" alt="" alt="About me">
+            <img src="../assets/images/linkedin.png" alt="About me">
             <span>About</span>
           </a>
         </li>

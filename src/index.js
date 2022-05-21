@@ -13,7 +13,7 @@ function App () {
   const header = document.querySelector('#header');
   const search = document.querySelector('#search');
  
-  header.innerHTML = Header();
+  header.insertAdjacentHTML('afterbegin', Header())
   search.innerHTML = Search();
 
 
@@ -22,7 +22,22 @@ function App () {
     e.preventDefault();
     getCityName(searchInput.value);
   });
-  
+  const menuButton = document.querySelector('.menu-button');
+  menuButton.addEventListener('click', () => {
+
+    const menu = document.querySelector('.menu');
+    const menuOpen = document.querySelector('.menu-open');
+    const menuClose = document.querySelector('.menu-close')
+    if(menu.style.display === "none") {
+      menuOpen.style.display = "none";
+      menuClose.style.display = "block";
+      menu.style.display = "block";
+    } else {
+      menuOpen.style.display = "block";
+      menuClose.style.display = "none";
+      menu.style.display = "none";
+    }
+  })
 }
 
 async function getCityName (cityName) {
